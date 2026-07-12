@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- Set theme class BEFORE any paint happens, to avoid white flash -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme') || 'dark';
+          document.documentElement.classList.add(theme);
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <!-- Primary Meta Tags -->
+    <title>Xeviqo — Learn Today. Build Tomorrow. | Python & Java Training</title>
+    <meta name="title" content="Xeviqo — Learn Today. Build Tomorrow." />
+    <meta name="description" content="Xeviqo is a modern technology company offering practical Python and Java training and final year academic project guidance, building toward AI, cloud, and SaaS solutions." />
+    <meta name="keywords" content="Xeviqo, Python training, Java training, final year projects, academic projects, coding bootcamp, software development, web development, Android development, AI training, cloud computing, full stack development, internship programs, tech education" />
+    <meta name="author" content="Xeviqo" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://xeviqo.com/" />
+    <meta property="og:title" content="Xeviqo — Learn Today. Build Tomorrow." />
+    <meta property="og:description" content="Practical Python & Java training and final year project guidance from a modern technology company." />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Xeviqo" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://xeviqo.com/" />
+    <meta name="twitter:title" content="Xeviqo — Learn Today. Build Tomorrow." />
+    <meta name="twitter:description" content="Practical Python & Java training and final year project guidance from a modern technology company." />
+    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:site" content="@xeviqo" />
+    <meta name="twitter:creator" content="@xeviqo" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://xeviqo.com/" />
+
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="https://xeviqo.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://xeviqo.com/" />
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="/logo-mark.png" />
+    <link rel="preload" as="image" href="/og-image.png" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- PWA Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Xeviqo" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Xeviqo",
+        "url": "https://xeviqo.com",
+        "logo": "https://xeviqo.com/logo-mark.png",
+        "slogan": "Learn Today. Build Tomorrow.",
+        "description": "Xeviqo offers Python and Java training and final year academic project guidance, expanding into AI, cloud, and SaaS solutions.",
+        "email": "info@xeviqo.com",
+        "telephone": "+91 1234569878",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://twitter.com/xeviqo",
+          "https://linkedin.com/company/xeviqo",
+          "https://github.com/xeviqo",
+          "https://www.youtube.com/@xeviqo"
+        ],
+        "foundingDate": "2024",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 1234569878",
+          "contactType": "Sales",
+          "availableLanguage": ["en", "hi"]
+        }
+      }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://xeviqo.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Training",
+            "item": "https://xeviqo.com/training"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Projects",
+            "item": "https://xeviqo.com/projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Services",
+            "item": "https://xeviqo.com/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Contact",
+            "item": "https://xeviqo.com/contact"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Course Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Python Training Program",
+        "description": "Practical Python training with project-based learning for beginners and intermediate developers.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Xeviqo",
+          "sameAs": "https://xeviqo.com"
+        }
+      }
+    </script>
+
+    <!-- Critical CSS -->
+    <style>
+      /* CSS Reset & Base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      /* Default (light) theme */
+      html.light body {
+        background: #f8fafc;
+        color: #0f172a;
+      }
+
+      /* Dark theme — matches your app's dark UI immediately, no flash */
+      html.dark body {
+        background: #0f172a;
+        color: #f1f5f9;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        min-height: 100vh;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      html.dark ::-webkit-scrollbar-track {
+        background: #1e293b;
+      }
+
+      html.dark ::-webkit-scrollbar-thumb {
+        background: #4c1d95;
+        border-radius: 10px;
+        transition: background 0.2s;
+      }
+
+      html.dark ::-webkit-scrollbar-thumb:hover {
+        background: #6d28d9;
+      }
+
+      html.light ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      html.light ::-webkit-scrollbar-thumb {
+        background: #c4b5fd;
+        border-radius: 10px;
+        transition: background 0.2s;
+      }
+
+      html.light ::-webkit-scrollbar-thumb:hover {
+        background: #8b5cf6;
+      }
+
+      /* Focus Styles */
+      :focus-visible {
+        outline: 2px solid #6366F1;
+        outline-offset: 2px;
+      }
+
+      /* Selection Styles */
+      ::selection {
+        background: #6366F1;
+        color: #ffffff;
+      }
+
+      ::-moz-selection {
+        background: #6366F1;
+        color: #ffffff;
+      }
+
+      /* Skip to Content */
+      .skip-link {
+        position: absolute;
+        top: -100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 24px;
+        background: #6366F1;
+        color: #ffffff;
+        border-radius: 8px;
+        z-index: 1000;
+        text-decoration: none;
+        font-weight: 600;
+        transition: top 0.3s;
+      }
+
+      .skip-link:focus {
+        top: 16px;
+      }
+
+      /* Utility Classes */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+
+    <!-- Google Analytics (Optional) -->
+    <script>
+      // Check for consent before loading analytics
+      if (localStorage.getItem('analytics-consent') === 'true') {
+        (function() {
+          const script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        })();
+      }
+    </script>
+
+    <!-- Cookie Consent (Optional) -->
+    <script>
+      // Simple cookie consent check
+      if (!localStorage.getItem('cookie-consent')) {
+        // Show cookie banner (to be implemented in React)
+        console.log('Cookie consent required');
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- React mounts directly into this empty root. The dark background is
+         already set by the inline theme script + CSS above, so there is
+         no flash and nothing visible before the real page appears. -->
+    <div id="root"></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Fallback for noscript -->
+    <noscript>
+      <div style="text-align: center; padding: 60px 20px; font-family: 'Inter', sans-serif; background: #0f172a; color: #f1f5f9; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div style="font-size: 64px; margin-bottom: 20px;">🚀</div>
+        <h1 style="color: #818cf8; font-size: 42px; margin-bottom: 16px; font-weight: 700;">Xeviqo</h1>
+        <p style="font-size: 22px; margin-bottom: 8px;">Learn Today. Build Tomorrow.</p>
+        <p style="color: #94a3b8; font-size: 16px; max-width: 400px; margin: 16px auto;">Please enable JavaScript to access this website and explore our training programs.</p>
+        <div style="margin-top: 32px; display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+          <a href="#" style="padding: 12px 32px; background: #6366F1; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Contact Us</a>
+          <a href="#" style="padding: 12px 32px; background: transparent; color: #818cf8; text-decoration: none; border-radius: 8px; font-weight: 600; border: 2px solid #818cf8;">Learn More</a>
+        </div>
+      </div>
+    </noscript>
+
+    <!-- Script to handle service worker registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('Service Worker registered successfully:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('Service Worker registration failed:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
