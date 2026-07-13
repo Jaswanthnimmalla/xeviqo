@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
   ],
+  base: '/xeviqo/',
   build: {
     outDir: 'dist',
     sourcemap: true,

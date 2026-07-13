@@ -208,11 +208,11 @@ export default function Contact() {
 
               <div className="space-y-2.5 sm:space-y-3 text-xs sm:text-sm">
                 <a
-                  href="mailto:xeviqo4@gmail.com"
+                  href="mailto:xeviqo43@gmail.com"
                   className="flex items-center gap-2 sm:gap-3 text-ink/70 dark:text-slate-300 hover:text-primary transition-colors"
                 >
                   <Mail size={14} className="sm:w-4 sm:h-4 flex-shrink-0" />
-                  <span className="break-all">xeviqo4@gmail.com</span>
+                  <span className="break-all">xeviqo43@gmail.com</span>
                 </a>
 
                 <a

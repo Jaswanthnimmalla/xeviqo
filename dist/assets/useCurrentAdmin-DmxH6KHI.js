@@ -1,2 +1,0 @@
-import{r as t}from"./vendor-COPjjhAV.js";import{aa as i,o as f,h as l,d,a6 as c}from"./index-D4swEKi7.js";function p(){const[e,r]=t.useState(null),[a,s]=t.useState(null);return t.useEffect(()=>i(c,r),[]),t.useEffect(()=>{if(!e){s(null);return}const n=f(l(d,"users",e.uid),u=>{if(u.exists()){const o=u.data();s({...o,id:u.id})}else s(null)});return()=>n()},[e]),a}export{p as u};
-//# sourceMappingURL=useCurrentAdmin-DmxH6KHI.js.map

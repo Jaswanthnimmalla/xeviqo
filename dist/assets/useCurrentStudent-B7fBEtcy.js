@@ -1,0 +1,2 @@
+import{r as t}from"./vendor-COPjjhAV.js";import{aa as S,h,d as p,ad as g,a6 as m}from"./index-DRYAZNqi.js";const E=()=>{const[o,e]=t.useState(null),[r,n]=t.useState(null),[d,c]=t.useState(!0),[l,i]=t.useState(null);return t.useEffect(()=>{const f=S(m,async s=>{if(s){n(s.uid);try{const a=h(p,"users",s.uid),u=await g(a);u.exists()?e({uid:s.uid,...u.data()}):e(null)}catch(a){i(a),e(null)}}else n(null),e(null);c(!1)});return()=>f()},[]),{student:o,uid:r,loading:d,error:l}};export{E as u};
+//# sourceMappingURL=useCurrentStudent-B7fBEtcy.js.map

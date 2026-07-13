@@ -213,6 +213,65 @@
         flex-direction: column;
       }
 
+      /* Loading Screen */
+      .loading-container {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        background: #0f172a;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+
+      html.light .loading-container {
+        background: #f8fafc;
+      }
+
+      .loading-container.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .loading-logo {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        background: linear-gradient(90deg, #818cf8, #c084fc);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid rgba(129, 140, 248, 0.2);
+        border-top-color: #818cf8;
+        animation: spin 0.8s linear infinite;
+      }
+
+      .loading-text {
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        color: #94a3b8;
+        letter-spacing: 0.03em;
+      }
+
+      html.light .loading-text {
+        color: #64748b;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
       /* Scrollbar Styling */
       ::-webkit-scrollbar {
         width: 10px;
@@ -337,12 +396,36 @@
     <!-- Skip to Content Link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- React mounts directly into this empty root. The dark background is
-         already set by the inline theme script + CSS above, so there is
-         no flash and nothing visible before the real page appears. -->
+    <!-- React mounts directly into this empty root. -->
     <div id="root"></div>
 
+    <!-- Loading screen sits ON TOP of #root (fixed position) so it doesn't
+         get wiped out the instant React renders — it's removed deliberately
+         via the script below, once the app has actually painted. -->
+    <div class="loading-container" id="loading-screen">
+      <div class="loading-logo">Xeviqo</div>
+      <div class="loading-spinner"></div>
+      <div class="loading-text">Loading your experience...</div>
+    </div>
+
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Fade out and remove the loading screen once the page has fully
+         loaded (images, fonts, etc. included), so the site is fully ready
+         to look at the instant the loader disappears. -->
+    <script>
+      window.addEventListener('load', function () {
+        var loader = document.getElementById('loading-screen');
+        if (!loader) return;
+        // Small delay so the fade feels intentional rather than abrupt.
+        setTimeout(function () {
+          loader.classList.add('is-hidden');
+          setTimeout(function () {
+            loader.remove();
+          }, 450);
+        }, 300);
+      });
+    </script>
 
     <!-- Fallback for noscript -->
     <noscript>
